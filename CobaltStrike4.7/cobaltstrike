@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Start Cobalt Strike Client
+#
+
+# Original Version
+# java -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -jar cobaltstrike-client.jar $*
+
+# CSAgent
+java -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en -jar cobaltstrike-client.jar $*

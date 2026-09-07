@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Start Cobalt Strike Aggressor Script
+#
+
+# Original Version
+java -Dfile.encoding=UTF-8 -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -classpath ./cobaltstrike-client.jar -Duser.language=en aggressor.headless.Start $*
